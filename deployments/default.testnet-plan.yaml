@@ -1,0 +1,18 @@
+---
+id: 0
+name: Testnet deployment
+network: testnet
+stacks-node: "https://api.testnet.hiro.so"
+bitcoin-node: "http://blockstack:blockstacksystem@bitcoind.testnet.stacks.co:18332"
+plan:
+  batches:
+    - id: 0
+      transactions:
+        - contract-publish:
+            contract-name: message-board-v2
+            expected-sender: ST3D86ZD0YNZ690B7YJ8F9M01G0PK3B46G7S9XH3F
+            cost: 7080
+            path: contracts/message-board-v2.clar
+            anchor-block-only: true
+            clarity-version: 3
+      epoch: "3.2"
